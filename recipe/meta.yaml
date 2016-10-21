@@ -1,7 +1,7 @@
 {%set name = "girder-client" %}
-{%set version = "1.3.1" %}
+{%set version = "2.0.0" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "0369c5d3f1555b8e44fb178b54549e07f680bc4d98dd2340ae9dc04c5ae917cd" %}
+{%set hash_val = "5724050e044b1d06093c22e6a004c7b8a074739e6fc0a7bb6cdf33a55beaeec4" %}
 
 package:
   name: {{ name }}
@@ -40,7 +40,10 @@ test:
 about:
   home: http://girder.readthedocs.org/en/latest/python-client.html
   license: Apache 2.0
+  license_family: Apache
   summary: 'Python client for interacting with Girder servers'
+  doc_url: http://girder.readthedocs.org/en/latest/python-client.html
+  dev_url: https://github.com/girder/girder/tree/master/clients/python
 
 extra:
   recipe-maintainers:
