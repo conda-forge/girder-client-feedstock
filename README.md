@@ -11,6 +11,18 @@ Summary: Python client for interacting with Girder servers
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/girder-client-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/girder-client-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/girder-client-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/girder-client-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/girder-client-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/girder-client-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/girder-client/badges/version.svg)](https://anaconda.org/conda-forge/girder-client)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/girder-client/badges/downloads.svg)](https://anaconda.org/conda-forge/girder-client)
+
 Installing girder-client
 ========================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `girder-client` available on your 
 ```
 conda search girder-client --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/girder-client-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/girder-client-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/girder-client-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/girder-client-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/girder-client-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/girder-client-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/girder-client/badges/version.svg)](https://anaconda.org/conda-forge/girder-client)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/girder-client/badges/downloads.svg)](https://anaconda.org/conda-forge/girder-client)
 
 
 Updating girder-client-feedstock
