@@ -1,7 +1,7 @@
 {%set name = "girder-client" %}
-{%set version = "2.0.0" %}
+{%set version = "2.1.0" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "5724050e044b1d06093c22e6a004c7b8a074739e6fc0a7bb6cdf33a55beaeec4" %}
+{%set hash_val = "49a2583bc8914f163619193fa7c71ef517de13c07c5e0c064268b6d5c79f3186" %}
 
 package:
   name: {{ name }}
