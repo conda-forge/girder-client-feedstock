@@ -1,22 +1,24 @@
-{%set name = "girder-client" %}
-{%set version = "2.0.0" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "5724050e044b1d06093c22e6a004c7b8a074739e6fc0a7bb6cdf33a55beaeec4" %}
+{% set name = "girder-client" %}
+{% set version = "2.1.0" %}
+{% set compress_type = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash = "49a2583bc8914f163619193fa7c71ef517de13c07c5e0c064268b6d5c79f3186" %}
+{% set build = 0 %}
 
 package:
-  name: {{ name }}
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hash_type }}: {{ hash_val }}
+  fn: {{ name }}-{{ version }}.{{ compress_type }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
+  {{ hash_type }}: {{ hash }}
 
 build:
   entry_points:
     - girder-cli = girder_client.cli:main
 
-  number: 0
+  number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -26,8 +28,10 @@ requirements:
 
   run:
     - python
+    - click >=6.7
     - diskcache
     - requests >=2.4.2
+    - requests-toolbelt
     - six
 
 test:
@@ -38,11 +42,11 @@ test:
     - girder-cli --help
 
 about:
-  home: http://girder.readthedocs.org/en/latest/python-client.html
+  home: https://girder.readthedocs.org/en/latest/python-client.html
   license: Apache 2.0
   license_family: Apache
   summary: 'Python client for interacting with Girder servers'
-  doc_url: http://girder.readthedocs.org/en/latest/python-client.html
+  doc_url: https://girder.readthedocs.org/en/latest/python-client.html
   dev_url: https://github.com/girder/girder/tree/master/clients/python
 
 extra:

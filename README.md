@@ -1,7 +1,7 @@
 About girder-client
 ===================
 
-Home: http://girder.readthedocs.org/en/latest/python-client.html
+Home: https://girder.readthedocs.org/en/latest/python-client.html
 
 Package license: Apache 2.0
 
