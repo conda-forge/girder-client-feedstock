@@ -31,7 +31,7 @@ requirements:
     - click >=6.7
     - diskcache
     - requests >=2.4.2
-    - requests_toolbelt
+    - requests-toolbelt
     - six
 
 test:
