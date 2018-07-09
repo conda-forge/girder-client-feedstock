@@ -3,7 +3,7 @@
 {% set compress_type = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash = "8c336ccfa6f837d3967756444d59a049668d3ca0c5730d1bf82f9b39f2225cb2" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -15,14 +15,16 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
+  noarch: python
   entry_points:
     - girder-cli = girder_client.cli:main
 
   number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  build:
+  host:
+    - pip
     - python
     - setuptools
 
