@@ -1,8 +1,8 @@
 {% set name = "girder-client" %}
-{% set version = "2.3.0" %}
+{% set version = "2.4.0" %}
 {% set compress_type = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "8c336ccfa6f837d3967756444d59a049668d3ca0c5730d1bf82f9b39f2225cb2" %}
+{% set hash = "1a9c882b8bce2e8233f572a4df9565c678e5614993e6606cdff04251532cddcb" %}
 {% set build = 0 %}
 
 package:
@@ -15,14 +15,16 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
+  noarch: python
   entry_points:
     - girder-cli = girder_client.cli:main
 
   number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  build:
+  host:
+    - pip
     - python
     - setuptools
 
