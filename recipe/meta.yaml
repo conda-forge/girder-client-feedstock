@@ -1,8 +1,8 @@
 {% set name = "girder-client" %}
-{% set version = "2.4.0" %}
+{% set version = "3.0.0" %}
 {% set compress_type = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "1a9c882b8bce2e8233f572a4df9565c678e5614993e6606cdff04251532cddcb" %}
+{% set hash = "83e2f9b00f5356261810ccad253f570a8953b90eab17feca01ad543ff936506a" %}
 {% set build = 0 %}
 
 package:
