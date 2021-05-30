@@ -47,6 +47,7 @@ about:
   home: https://girder.readthedocs.org/en/latest/python-client.html
   license: Apache 2.0
   license_family: Apache
+  license_file: LICENSE
   summary: 'Python client for interacting with Girder servers'
   doc_url: https://girder.readthedocs.org/en/latest/python-client.html
   dev_url: https://github.com/girder/girder/tree/master/clients/python
