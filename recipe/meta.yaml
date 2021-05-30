@@ -1,35 +1,31 @@
 {% set name = "girder-client" %}
-{% set version = "2.4.0" %}
-{% set compress_type = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "1a9c882b8bce2e8233f572a4df9565c678e5614993e6606cdff04251532cddcb" %}
-{% set build = 0 %}
+{% set version = "3.0.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: a4532f9233970eabca762d4af7daa60e3f581be1e52e046d65a62bc7cb4be6fb
 
 build:
   noarch: python
   entry_points:
     - girder-cli = girder_client.cli:main
 
-  number: {{ build }}
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - setuptools
+    - setuptools_scm
 
   run:
-    - python
+    - python >=3.6
     - click >=6.7
     - diskcache
     - requests >=2.4.2
@@ -42,11 +38,16 @@ test:
 
   commands:
     - girder-cli --help
+    - pip check
+    
+  requires:
+    - pip
 
 about:
   home: https://girder.readthedocs.org/en/latest/python-client.html
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
+  license_file: LICENSE
   summary: 'Python client for interacting with Girder servers'
   doc_url: https://girder.readthedocs.org/en/latest/python-client.html
   dev_url: https://github.com/girder/girder/tree/master/clients/python
@@ -54,3 +55,4 @@ about:
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - jan-janssen
