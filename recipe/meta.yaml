@@ -1,5 +1,5 @@
 {% set name = "girder-client" %}
-{% set version = "3.0.3" %}
+{% set version = "3.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a4532f9233970eabca762d4af7daa60e3f581be1e52e046d65a62bc7cb4be6fb
+  sha256: c1cefb6597bb46ca10c314b551edf282ffa8f4cc940a10194d97703b0c4dc342
 
 build:
   noarch: python
@@ -39,7 +39,7 @@ test:
   commands:
     - girder-cli --help
     - pip check
-    
+
   requires:
     - pip
 
@@ -48,7 +48,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'Python client for interacting with Girder servers'
+  summary: Python client for interacting with Girder servers
   doc_url: https://girder.readthedocs.org/en/latest/python-client.html
   dev_url: https://github.com/girder/girder/tree/master/clients/python
 
