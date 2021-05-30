@@ -3,7 +3,7 @@ About girder-client
 
 Home: https://girder.readthedocs.org/en/latest/python-client.html
 
-Package license: Apache 2.0
+Package license: Apache-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/girder-client-feedstock/blob/master/LICENSE.txt)
 
