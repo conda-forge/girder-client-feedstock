@@ -1,11 +1,11 @@
-About girder-client
-===================
+About girder-client-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/girder-client-feedstock/blob/main/LICENSE.txt)
 
 Home: https://girder.readthedocs.org/en/latest/python-client.html
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/girder-client-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python client for interacting with Girder servers
 
