@@ -1,5 +1,5 @@
 {% set name = "girder-client" %}
-{% set version = "3.1.16" %}
+{% set version = "3.1.17" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f587166a166836e1fbfe73b6ea07563ecd31cabb9de9fc390747d9a2217a990b
+  sha256: 177ddee7dcf65b551f72d55d3e803ba8f9b89a089076e80732f232e791c94fca
 
 build:
   noarch: python
