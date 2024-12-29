@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 9a3e8d103a2e653a458ebfd6136b073222f804620b276ade47404df1487637bc
 
 build:
@@ -14,18 +14,18 @@ build:
   entry_points:
     - girder-cli = girder_client.cli:main
 
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
     - setuptools_scm
 
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - click >=6.7
     - diskcache
     - requests >=2.4.2
@@ -42,6 +42,7 @@ test:
 
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://girder.readthedocs.org/en/latest/python-client.html
