@@ -1,5 +1,5 @@
 {% set name = "girder-client" %}
-{% set version = "3.2.6" %}
+{% set version = "3.2.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 9a3e8d103a2e653a458ebfd6136b073222f804620b276ade47404df1487637bc
+  sha256: 95cf73313ec486014d3f26a21e2a407935c835f6b8f9e9f1fca8840765b35258
 
 build:
   noarch: python
   entry_points:
     - girder-cli = girder_client.cli:main
 
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
