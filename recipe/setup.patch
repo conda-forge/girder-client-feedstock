@@ -1,0 +1,22 @@
+From c4d945358932bab698fc7932916a9798424f4051 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Jan=20Jan=C3=9Fen?= <janssen@mpie.de>
+Date: Fri, 10 Jul 2026 07:13:54 +0200
+Subject: [PATCH] fix conda version
+
+---
+ setup.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 5984517..391b9be 100644
+--- a/setup.py
++++ b/setup.py
+@@ -20,7 +20,7 @@ def prerelease_local_scheme(version):
+     if re.match(pattern, os.getenv('CIRCLE_BRANCH', '')):
+         return ''
+     else:
+-        return get_local_node_and_date(version)
++        return os.getenv('PKG_VERSION')
+ 
+ 
+ install_reqs = [
