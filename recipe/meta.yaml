@@ -14,8 +14,8 @@ build:
   entry_points:
     - girder-cli = girder_client.cli:main
 
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 1
+  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
