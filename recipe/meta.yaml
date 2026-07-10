@@ -15,7 +15,7 @@ build:
     - girder-cli = girder_client.cli:main
 
   number: 1
-  script: export SETUPTOOLS_SCM_PRETEND_VERSION=$PKG_VERSION; {{ PYTHON }} -m pip install . -vv
+  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
