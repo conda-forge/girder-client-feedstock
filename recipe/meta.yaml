@@ -1,5 +1,5 @@
 {% set name = "girder-client" %}
-{% set version = "5.0.12" %}
+{% set version = "5.0.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 7954e215cbd5a8b1284e71d21f3adfadb9f0c1a8776365357086bf6dfe484a74
+  sha256: 925d072828dbb3b0b4f44da86c46e38bf451b7d6c014b69952c145c6d6e399d5
 
 build:
   noarch: python
   entry_points:
     - girder-cli = girder_client.cli:main
 
-  number: 1
+  number: 0
   script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv
 
 requirements:
