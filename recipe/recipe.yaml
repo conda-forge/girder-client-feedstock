@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: girder-client
-  version: "5.0.17"
+  version: 5.0.17
 
 package:
   name: ${{ name|lower }}
@@ -23,7 +23,7 @@ build:
 requirements:
   host:
     - pip
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - setuptools
     - setuptools_scm
   run:
@@ -45,7 +45,7 @@ tests:
   - requirements:
       run:
         - pip
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script:
       - girder-cli --help
 
