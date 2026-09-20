@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: girder-client
-  version: 5.0.17
+  version: "5.0.18"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 92b756c35a8c612a56d454e1c2ee33272dc5089ea65bc0ea6c76737498ffc6f3
+  sha256: 76d51066fb897fecc5268d815561f9fc63c03b869c07641cd0e2cc17e7d6b904
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }} ${{ PYTHON }} -m pip install . -vv
   python:
