@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: girder-client
-  version: "5.0.20"
+  version: "5.0.21"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: c07a67922f1ad9f06a2955d002fd4fbae44089d8c85e9f25fd77a4cec955ecf6
+  sha256: deea7f4d35cb8decd4c8fe240b774e5382457389537b61b350eb07af6a9ae767
 
 build:
   number: 0
